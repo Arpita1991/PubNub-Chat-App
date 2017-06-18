@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.10.0.js"></script>
+  <script src="https://cdn.pubnub.com/sdk/pubnub-angular/pubnub-angular-4.0.2.min.js"></script>
+	<script src="app.js"></script>
+  </head>
+ <body ng-app="PubNubAngularApp">
+    <div ng-controller="HelloCtrl">
+	 <input type='text' ng-model="msg"/>
+	 <button ng-click="SendMessage(msg)">Send Message</button>
+	
+		<ul>
+		<li ng-repeat="message in chatMessages track by $index">
+			{{message}}</li>
+		</ul>
+	 </div>	 
+	
+	 </body>
+</html>
